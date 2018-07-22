@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+company=Company.create(name: "Rocket",subdomain: "rocket",domain: "rocket.bearblocks.localhost",theme_id: 1)
+company.save!
