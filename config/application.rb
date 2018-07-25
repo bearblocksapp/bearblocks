@@ -1,6 +1,6 @@
 require_relative 'boot'
 require 'rails/all'
-
+require_relative '../app/middleware/company_middleware'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
@@ -13,11 +13,11 @@ module Bearblocks
     config.eager_load_paths += ["#{config.root}/lib"]
     config.paths.add 'offending/file/parent/directory', eager_load: true
 
-
-    config.middleware.use ActionDispatch::Flash
-    config.middleware.use Rack::MethodOverride
-    config.middleware.use ActionDispatch::Cookies
-    config.middleware.use ActionDispatch::Session::CookieStore
+    config.middleware.use CompanyMiddleware
+    # config.middleware.use ActionDispatch::Flash
+    # config.middleware.use Rack::MethodOverride
+    # config.middleware.use ActionDispatch::Cookies
+    # config.middleware.use ActionDispatch::Session::CookieStore
 
 
 
