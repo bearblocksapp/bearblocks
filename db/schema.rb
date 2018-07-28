@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_09_001642) do
+ActiveRecord::Schema.define(version: 2018_07_28_221417) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 2018_07_09_001642) do
     t.string "subdomain", null: false
     t.string "domain", null: false
     t.integer "user_count", default: 0, null: false
-    t.integer "theme_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
