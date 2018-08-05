@@ -7,5 +7,21 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-company=Company.create(name: "Rocket",subdomain: "rocket",domain: "rocket.bearblocks.localhost",theme_id: 1)
-company.save!
+rocket=Company.create!(name: "Rocket",subdomain: "rocket",domain: "rocket.bearblocks.localhost")
+demo=Company.create!(name: "Demo",subdomain: "demo",domain:"demo.bearblocks.localhost")
+
+User.create!(email: "ali_rocket@rocket.com",password:"pass1234$",company_id: rocket.id)
+User.create!(email: "akram_rocket@rocket.com", password: "pass1234$",company_id: rocket.id)
+User.create!(email: "tim_rocket@rocket.com", password: "pass1234$",company_id: rocket.id)
+User.create!(email: "peter_rocket@rocket.com",password: "pass1234$",company_id: rocket.id)
+
+
+User.create!(email: "ali_demo@demo.com",password: "pass1234$",company_id: demo.id)
+User.create!(email: "akram_demo@demo.com",password: "pass1234$", company_id: demo.id)
+User.create!(email: "tim_demo@demo.com",password: "pass1234$", company_id: demo.id)
+User.create!(email: "peter_demo@demo.com", password: "pass1234$", company_id: demo.id)
+
+
+
+
+

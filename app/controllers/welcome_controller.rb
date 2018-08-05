@@ -3,8 +3,8 @@ class WelcomeController < ApplicationController
 
   def index
     if request.subdomain.present? && @subdomains.include?(request.subdomain)
-      # render text: '', layout: 'application'
-      render json: "Welcome TO BearBlocks"
+      set_current_company(request.subdomain) 
+        
     else
       render json: "Invalid-Subdomain"
     end
